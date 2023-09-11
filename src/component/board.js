@@ -13,7 +13,6 @@ function Board() {
       newBoard.push(boardRow);
     }
     setBoard(newBoard);
-
   }, []);
 
 
@@ -21,9 +20,10 @@ function Board() {
   return (
     <div>
       {board &&
-        board.map((row) => {
+        board.map((row, index) => {
           return (
             <div
+              key={index}
               style={
                 {
                   display: "flex",
@@ -32,9 +32,10 @@ function Board() {
               }
             >
               {
-                row.map((col) => {
+                row.map((col, indexC) => {
                   return (
                     <div
+                      key={indexC}
                       style={
                         {
                           border: "1px solid black",
@@ -43,7 +44,6 @@ function Board() {
                         }
                       }
                     >
-                      hi
                     </div>
                   )
                 })
