@@ -51,6 +51,8 @@ function Board() {
             }
           }
 
+          currentRow = i;
+          currentCol = j;
           //horizontal check
           while (currentPlayer === board[currentRow][currentCol] && currentCol < boardSize) {
             currentCol += 1;
@@ -60,6 +62,8 @@ function Board() {
             }
           }
 
+          currentRow = i;
+          currentCol = j;
           //diagnol check
           while (currentPlayer === board[currentRow][currentCol] && currentCol < boardSize && currentRow < boardSize) {
             currentCol += 1;
@@ -69,9 +73,7 @@ function Board() {
               return true;
             }
           }
-
         }
-
       }
     }
   }
