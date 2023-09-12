@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Board() {
   // Component logic and JSX here
 
-  const boardSize = 3;
+  const boardSize = 10;
   const [board, setBoard] = useState([]);
   const [turn, setTurn] = useState(0);
   const [winner, setWinner] = useState(false);
